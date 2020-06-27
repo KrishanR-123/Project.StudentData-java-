@@ -30,8 +30,6 @@ public class Main
         for(int k=0;k<marks.length;k++){
             System.out.println(rollNo[k]+ "            " +marks[k]);
         }
-     
-
 
     }
 }
