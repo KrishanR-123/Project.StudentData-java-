@@ -36,3 +36,11 @@ class Display extends conn
 
     }
 }
+
+public class Main
+{
+    public static void main(String[] args) throws SQLException{
+       new Display();
+
+    }
+}
