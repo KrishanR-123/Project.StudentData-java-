@@ -17,3 +17,22 @@ class conn{
         }
     }
 }
+
+class Display extends conn
+{
+    Display() throws SQLException {
+        String query = "select * fROM marks;";
+
+        ResultSet r = s.executeQuery(query);
+        System.out.println("Roll Number"+"      "+"Marks" );
+        while(r.next()) {
+            int roll = r.getInt("Roll Number");
+            int Marks = r.getInt("Marks");
+            System.out.println(roll+"                "+Marks );
+
+        }
+        s.close();
+        c.close();
+
+    }
+}
