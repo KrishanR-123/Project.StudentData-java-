@@ -34,4 +34,32 @@ class Display extends conn
 
     }
 }
+class Add extends conn
+{
+    Add() throws SQLException {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter roll number of the student");
+        int Roll_Number=scan.nextInt();
+        System.out.println("Enter Marks of the student");
+        int Marks=scan.nextInt();
 
+        String query = "INSERT INTO marks Values (Roll_Number,Marks);";
+
+         s.executeUpdate(query);
+
+         String query1 = "select * fROM marks;";
+        ResultSet r = s.executeQuery(query1);
+        System.out.println("New Table");
+        System.out.println("Roll_Number"+"      "+"Marks" );
+        while(r.next()) {
+            int roll = r.getInt("Roll_Number");
+            int Mark = r.getInt("Marks");
+            System.out.println(roll+"                "+Mark );
+
+        }
+
+        s.close();
+        c.close();
+
+    }
+}
