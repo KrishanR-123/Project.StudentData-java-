@@ -63,3 +63,21 @@ class Add extends conn
 
     }
 }
+public class Main
+{
+    public static void main(String[] args) throws SQLException{
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter your choice");
+        int n=scan.nextInt();
+
+        switch (n){
+            case 1:
+                new Display();
+                break;
+            case 2:
+                new Add();
+        }
+
+
+    }
+}
