@@ -19,7 +19,7 @@ class conn{
 class Display extends conn
 {
     Display() throws SQLException {
-        String query = "select * fROM marks;";
+        String query = "select * from marks;";
 
         ResultSet r = s.executeQuery(query);
         System.out.println("Roll_Number"+"      "+"Marks" );
@@ -43,11 +43,11 @@ class Add extends conn
         System.out.println("Enter Marks of the student");
         int Marks=scan.nextInt();
 
-        String query = "INSERT INTO marks Values (Roll_Number,Marks);";
+        String query = "insert into marks values (Roll_Number,Marks);";
 
          s.executeUpdate(query);
 
-         String query1 = "select * fROM marks;";
+         String query1 = "select * from marks;";
         ResultSet r = s.executeQuery(query1);
         System.out.println("New Table");
         System.out.println("Roll_Number"+"      "+"Marks" );
