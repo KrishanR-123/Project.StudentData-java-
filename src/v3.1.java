@@ -78,6 +78,7 @@ public class Main
                 break;
             case 2:
                 new Add();
+                break;
         }
 
 
