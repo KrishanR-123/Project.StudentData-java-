@@ -55,8 +55,7 @@ class Add extends conn
             int roll = r.getInt("Roll_Number");
             int Mark = r.getInt("Marks");
             System.out.println(roll+"                "+Mark );
-
-        }
+            }
 
         s.close();
         c.close();
