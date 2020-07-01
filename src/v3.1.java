@@ -16,6 +16,7 @@ class conn{
         }
     }
 }
+
 class Display extends conn
 {
     Display() throws SQLException {
@@ -34,6 +35,7 @@ class Display extends conn
 
     }
 }
+
 class Add extends conn
 {
     Add() throws SQLException {
@@ -62,6 +64,7 @@ class Add extends conn
 
     }
 }
+
 public class Main
 {
     public static void main(String[] args) throws SQLException{
