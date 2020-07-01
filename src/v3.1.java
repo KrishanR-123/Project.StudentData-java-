@@ -28,11 +28,9 @@ class Display extends conn
             int roll = r.getInt("Roll_Number");
             int Marks = r.getInt("Marks");
             System.out.println(roll+"                "+Marks );
-
-        }
+            }
         s.close();
         c.close();
-
     }
 }
 
