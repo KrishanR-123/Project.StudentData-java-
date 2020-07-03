@@ -65,3 +65,32 @@ class Add extends conn
 
     }
 }
+
+class Delete extends conn
+{
+    Delete() throws SQLException {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter roll number of the student whose data you want to delete");
+        int Roll_Number=scan.nextInt();
+
+
+        String query = "delete from marks where Roll_Number = Roll_Number;";
+
+        s.executeUpdate(query);
+
+        String query1 = "select * from marks;";
+        ResultSet r = s.executeQuery(query1);
+        System.out.println("New Table");
+        System.out.println("Roll_Number"+"      "+"Marks" );
+        while(r.next()) {
+            int roll = r.getInt("Roll_Number");
+            int Mark = r.getInt("Marks");
+            System.out.println(roll+"                "+Mark );
+
+        }
+
+        s.close();
+        c.close();
+
+    }
+}
