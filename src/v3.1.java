@@ -10,7 +10,7 @@ class conn{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             c = DriverManager.getConnection("jdbc:mysql://localhost:3308/student","root","root");
-            s =c.createStatement();
+            s = c.createStatement();
         }catch(Exception e){
             System.out.println(e);
         }
@@ -21,7 +21,7 @@ class Display extends conn
 {
     Display() throws SQLException {
         String query = "select * from marks;";
-
+        new conn();
         ResultSet r = s.executeQuery(query);
         System.out.println("Roll_Number"+"      "+"Marks" );
         while(r.next()) {
@@ -37,6 +37,7 @@ class Display extends conn
 class Add extends conn
 {
     Add() throws SQLException {
+        new conn();
         Scanner scan=new Scanner(System.in);
         System.out.println("Enter roll number of the student");
         int Roll_Number=scan.nextInt();
@@ -44,10 +45,9 @@ class Add extends conn
         int Marks=scan.nextInt();
 
         String query = "insert into marks values (Roll_Number,Marks);";
+        s.executeUpdate(query);
 
-         s.executeUpdate(query);
-
-         String query1 = "select * from marks;";
+        String query1 = "select * from marks;";
         ResultSet r = s.executeQuery(query1);
         System.out.println("New Table");
         System.out.println("Roll_Number"+"      "+"Marks" );
