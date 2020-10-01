@@ -8,10 +8,10 @@ class conn{
     Statement s;
     public conn(){
         try{
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-//          Class.forName("com.mysql.cj.jdbc.Driver");  //For Oracle Database
+//          Class.forName("oracle.jdbc.driver.OracleDriver"); //For Oracle Database
+            Class.forName("com.mysql.cj.jdbc.Driver");  
             c = DriverManager.getConnection("jdbc:mysql://localhost:3308/student","root","root");
-//             c = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","root","root");   //For Oracle Database
+//          c = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","root","root");   //For Oracle Database
             s =c.createStatement();
         }catch(Exception e){
             System.out.println(e);
